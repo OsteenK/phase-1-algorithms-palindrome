@@ -1,16 +1,18 @@
 function isPalindrome(word) {
-  // Write your algorithm here
+  const arrayOfLetters = word.split('');
+  const reverseLetters = arrayOfLetters.reverse()
+  const reverseString  = reverseLetters.join('')
+  if (word == reverseString){
+
+    return true
+
+  } else {
+    return false
+  }
+
 }
 
-/* 
-  Add your pseudocode here
-*/
-
-/*
-  Add written explanation of your solution here
-*/
-
-// You can run `node index.js` to view these console logs
+ 
 if (require.main === module) {
   // add your own custom tests in here
   console.log("Expecting: true");
@@ -23,3 +25,7 @@ if (require.main === module) {
 }
 
 module.exports = isPalindrome;
+
+
+
+//Write a function `isPalindrome` that will receive one argument, a string. Your function should return `true` if the string is a palindrome (that is, if it reads the same forwards and backwards, like `"mom"` or `"racecar"`), and return`false` if it is not a palindrome.?
